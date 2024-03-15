@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hover Arrow</title>
+<style>
+  .arrow-container {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin: 20px;
+  }
+
+  .arrow-segment {
+    height: 50px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .realiser { background-color: #ccc; }
+  .realiser:hover { background-color: #666; }
+
+  .optimiser { background-color: #f90; }
+  .optimiser:hover { background-color: #c60; }
+
+  .administrer { background-color: #8D4; }
+  .administrer:hover { background-color: #6A3; }
+
+  .gerer { background-color: #39F; }
+  .gerer:hover { background-color: #27C; }
+
+  .conduire { background-color: #00F; }
+  .conduire:hover { background-color: #00C; }
+
+  .collaborer { background-color: #0CF; flex-grow: 2; position: relative; }
+  .collaborer:hover { background-color: #09A; }
+
+  .collaborer::after {
+    content: '';
+    position: absolute;
+    right: -25px;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 25px solid #0CF;
+    transition: border-left-color 0.3s ease-in-out;
+  }
+  .collaborer:hover::after {
+    border-left-color: #09A;
+  }
+
+  .arrow-tail {
+    width: 20px;
+    height: 50px;
+    background-color: #ccc;
+  }
+</style>
+</head>
+<body>
+
+<div class="arrow-container">
+  <div class="arrow-tail"></div>
+  <div class="arrow-segment realiser">Réaliser</div>
+  <div class="arrow-segment optimiser">Optimiser</div>
+  <div class="arrow-segment administrer">Administrer</div>
+  <div class="arrow-segment gerer">Gérer</div>
+  <div class="arrow-segment conduire">Conduire</div>
+  <div class="arrow-segment collaborer">Collaborer</div>
+</div>
+
+</body>
+</html>
