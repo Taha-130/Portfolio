@@ -1,0 +1,6 @@
+Pop up en fonction de chaque compétence présente des projets en slideur
+
+transition main cliquable sur la flèche
+
+quand on clique sur un projet en particulier on voit les axes lui concernant
+

@@ -1,0 +1,32 @@
+/* Container pour le carrousel de projets */
+.slider-container {
+    display: none; /* initialement caché */
+    position: relative;
+    max-width: 600px; /* ajustez selon votre besoin */
+    margin: 20px auto;
+  }
+
+  .project-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    position: relative; /* pour positionner absolument les boutons */
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .prev { left: -45px; } /* ajustez en fonction de la taille de votre bouton */
+  .next { right: -45px; } /* ajustez en fonction de la taille de votre bouton */
+
+  /* Pour le titre du projet */
+  .project-title {
+    margin-bottom: 15px;
+  }

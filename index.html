@@ -12,7 +12,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="./css/arrow.css">
+  <link rel="stylesheet" href="./css/slider.css">
+
   <script src="./js/global.js" defer></script>
+  <script src="./js/arrow.js" defer></script>
+  <script src="./js/slider.js" defer></script>
+
+
+
 
 </head>
 
@@ -26,13 +33,13 @@
       </div>
       <nav class="navbar ">
         <ul class="menu list-unstyled">
-          <li><a href="#hero">Accueil</a></li>
-          <li><a href="#about">A propos</a></li>
-          <li><a href="#skills">Compétences</a></li>
-          <li><a href="#portfolio">Projets</a></li>
-          <li><a href="CV_alternance.pdf" download>CV</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#hero">accueil</a></li>
+          <li><a href="#about">à-propos</a></li>
+          <li><a href="#skills">compétences</a></li>
+          <li><a href="#portfolio">projets</a></li>
+          <li><a href="CV_alternance.pdf" download>cv</a></li>
+          <li><a href="blog.html">blog</a></li>
+          <li><a href="#contact">contact</a></li>
         </ul>
       </nav>
       <div class="right">
@@ -58,7 +65,7 @@
     <div class="container">
       <div class="grid">
         <div class="hero__item left">
-          <span>Apprenti Data Scientist</span>
+          <span>Apprenti data scientist</span>
           <h1 class="title">Hello, Je suis Taha SEFOUDINE de Paris</h1>
           <p>Bienvenue sur mon portfolio ! </p>
         </div>
@@ -72,10 +79,10 @@
           <img width="560" height="453" src="./img/person.jpg" alt="Taha SEFOUDINE - Développeur web freelance">
         </div>
         <div class="grid__item">
-          <h2 class="section-title">A propos</h2>
+          <h2 class="section-title">À-propos</h2>
           <h3>Qui suis-je ?</h3>
           <p>Étudiant en deuxième année de BUT Informatique à l'Université Gustave Eiffel.</strong> Actuellement
-            Apprenti Data Scientist au sein du Ministère de L'Économie et des Finances - DSCI.
+            apprenti data scientist au sein du ministère de l'Économie des Finances et de la Souveraineté industrielle et numérique - SG/DSCI.
           </p>
           <strong><p>Expérience : 1 an <br>
           Parcours choisi : réalisation d'applications</strong>
@@ -83,7 +90,7 @@
           <ul>
             <li>En un mot : Efficace</li>
           </ul>
-          <img width="560" height="453" src="./img/timeline.jpg" alt="Timeline">
+          <img width="560" height="453" src="./img/timeline.png" alt="Timeline">
 
         </div>
       </div>
@@ -104,15 +111,81 @@
 
 
     <div class="arrow-container">
-      <div class="arrow-tail"></div>
-      <div class="arrow-segment realiser">Réaliser</div>
-      <div class="arrow-segment optimiser">Optimiser</div>
-      <div class="arrow-segment administrer">Administrer</div>
-      <div class="arrow-segment gerer">Gérer</div>
-      <div class="arrow-segment conduire">Conduire</div>
-      <div class="arrow-segment collaborer">Collaborer</div>
+      <button class="arrow-segment realiser" onclick="showSlider('realiser')">Réaliser</button>
+      <button class="arrow-segment optimiser" onclick="showSlider('optimiser')">Optimiser</button>
+      <button class="arrow-segment administrer" onclick="showSlider('administrer')">Administrer</button>
+      <button class="arrow-segment gerer" onclick="showSlider('gerer')">Gérer</button>
+      <button class="arrow-segment conduire" onclick="showSlider('conduire')">Conduire</button>
+      <button class="arrow-segment collaborer" onclick="showSlider('collaborer')">Collaborer</button>
     </div>
-      
+
+  </div>
+  <!-- Ajoutez vos conteneurs de slider ici, un pour chaque compétence -->
+  <!-- L'exemple suivant est pour 'Réaliser' -->
+
+  <div class="slider-container" id="realiserSlider">
+    <div class="project-card">
+      <h3 class="project-title">Projet Search (CS50)</h3>
+      <a href="realiser_details.html"><img src="img/search.jpg" alt="Image Projet Réaliser 1"></a>
+    </div>
+    <!-- Ajoutez d'autres project-card pour d'autres projets sous 'Réaliser' -->
+    <button class="prev" onclick="navigateSlider('realiser', -1)">❮</button>
+    <button class="next" onclick="navigateSlider('realiser', 1)">❯</button>
+  </div>
+  
+  <div class="slider-container" id="optimiserSlider">
+    <div class="project-card">
+      <h3 class="project-title">TP Automates</h3>
+      <a href="optimiser_details.html"><img src="img/automates.png" alt="Image Projet Optimiser 1"></a>
+    </div>
+    <!-- Ajoutez d'autres project-card pour d'autres projets sous 'Optimiser' -->
+    <button class="prev" onclick="navigateSlider('optimiser', -1)">❮</button>
+    <button class="next" onclick="navigateSlider('optimiser', 1)">❯</button>
+  </div>
+  
+  <div class="slider-container" id="administrerSlider">
+    <div class="project-card">
+      <h3 class="project-title"> TP virtualisation </h3>
+      <a href="administrer_details.html"><img src="img/virtualisation.jpg" alt="Image TP virtualisation"></a>
+    </div>
+    <!-- Ajoutez d'autres project-card pour d'autres projets sous 'Administrer' -->
+    <button class="prev" onclick="navigateSlider('administrer', -1)">❮</button>
+    <button class="next" onclick="navigateSlider('administrer', 1)">❯</button>
+  </div>
+  
+  <div class="slider-container" id="gererSlider">
+    <div class="project-card">
+      <h3 class="project-title">Projet Bercy Vert</h3>
+      <a href="gerer_details.html"><img src="img/bercy.png" alt="Image Projet Bercy Vert"></a>
+    </div>
+    <!-- Ajoutez d'autres project-card pour d'autres projets sous 'Gérer' -->
+    <button class="prev" onclick="navigateSlider('gerer', -1)">❮</button>
+    <button class="next" onclick="navigateSlider('gerer', 1)">❯</button>
+  </div>
+  
+  <div class="slider-container" id="conduireSlider">
+    <div class="project-card">
+      <h3 class="project-title">Projet Controverses</h3>
+      <a href="conduire_details.html"><img src="img/controverses.png" alt="Image Projet Controverses"></a>
+    </div>
+    <!-- Ajoutez d'autres project-card pour d'autres projets sous 'Conduire' -->
+    <button class="prev" onclick="navigateSlider('conduire', -1)">❮</button>
+    <button class="next" onclick="navigateSlider('conduire', 1)">❯</button>
+  </div>
+  
+  <div class="slider-container" id="collaborerSlider">
+    <div class="project-card">
+      <h3 class="project-title">Projet SAE Wordschain</h3>
+      <a href="collaborer_details.html"><img src="img/wordschain.png" alt="Image SAE Wordschain "></a>
+    </div>
+    <!-- Ajoutez d'autres project-card pour d'autres projets sous 'Collaborer' -->
+    <button class="prev" onclick="navigateSlider('collaborer', -1)">❮</button>
+    <button class="next" onclick="navigateSlider('collaborer', 1)">❯</button>
+  </div>
+
+
+
+
       <div class="grid">
         <div class="grid__item">
           <h3>Mes domaines d'apprentissage</h3>
@@ -192,53 +265,11 @@
         <div class="section-header">
           <h2 class="section-title">Projets</h2>
 
-          <p>Je vous invite à découvrir mes projets soigneusement sélectionnés qui reflètent mon travail et ma créativité, 
-            en plus des autres projets que je partage sur <a href="https://github.com/Taha-130">GitHub</a>.
+          <p>Je vous invite à découvrir en plus des autres projets que je partage sur <a href="https://github.com/Taha-130">GitHub</a>.
           </p>
         </div>
-        <div class="grid">
-          <div class="project">
-            <h3>Batailles de boules</h3>
-            <img class="img-square" src="./img/projet1.jpg" alt="Projet 1">
-            <p>Catégorie: Programmation en PYTHON</p>
-            <a href="projet1-details.html">En savoir plus</a>
-          </div>
-          <div class="project">
-            <h3>Base de données</h3>
-            <img class="img-square" src="./img/projet2.png" alt="Projet 2">
-            <p>Catégorie: Base de données (SQL, PHP)</p>
-            <a href="projet2-details.html">En savoir plus</a>
-          </div>
-          <div class="project">
-            <h3>UNESCO</h3>
-            <img class="img-square" src="./img/projet3.png" alt="Projet 3">
-            <p>Catégorie: Développement web (HTML, CSS)</p>
-            <a href="projet3-details.html">En savoir plus</a>
-          </div>
-          <div class="project">
-            <h3>Backpack HERO</h3>
-            <img class="img-square" src="./img/projet4.jpg" alt="Projet 4">
-            <p>Catégorie: Programmation en JAVA</p>
-            <a href="projet4-details.html">En savoir plus</a>
-          </div>
-          <div class="project">
-            <h3>Configuration d'un serveur HTTPS</h3>
-            <img class="img-square" src="./img/projet5.png" alt="Projet 5">
-            <p>Catégorie: Réseau</p>
-            <a href="projet5-details.html">En savoir plus</a>
-          </div>
-          <div class="project">
-            <h3>Gestionnaire de tâches</h3>
-            <img class="img-square" src="./img/projet6.png" alt="Projet 6">
-            <p>Catégorie: Application Flask (Python, SQL)</p>
-            <a href="projet6-details.html">En savoir plus</a>
-          </div>
-        </div>
-      </div>
     </section>
-    
-      
-  
+
     <section id="contact" class="form">
       <div class="container">
         <div class="section-header">
@@ -288,7 +319,7 @@
           </ul>
         </div>
         <div class="grid__item">
-          <p>Copyright © 2023 Université Gustave Eiffel. All Rights Reserved.</p>
+          <p>Copyright © 2024 Taha SEFOUDINE. All Rights Reserved.</p>
         </div>
       </div>
     </div>

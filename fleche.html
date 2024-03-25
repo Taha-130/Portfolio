@@ -1,74 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hover Arrow</title>
-<style>
-  .arrow-container {
-    display: flex;
-    align-items: center;
-    width: 95%;
-    margin: 20px;
-  }
+<link rel="shortcut icon" href="./img/favicon.ico?v=1" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/global.css">
+<link rel="stylesheet" href="./css/arrow.css">
+<link rel="stylesheet" href="./css/slider.css">
 
-  .arrow-segment {
-    height: 50px;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease-in-out;
-  }
+<script src="./js/global.js" defer></script>
+<script src="./js/arrow.js" defer></script>
+<script src="./js/slider.js" defer></script>
 
-  .realiser { background-color: #ccc; }
-  .realiser:hover { background-color: #666; }
-
-  .optimiser { background-color: #f90; }
-  .optimiser:hover { background-color: #c60; }
-
-  .administrer { background-color: #8D4; }
-  .administrer:hover { background-color: #6A3; }
-
-  .gerer { background-color: #39F; }
-  .gerer:hover { background-color: #27C; }
-
-  .conduire { background-color: #00F; }
-  .conduire:hover { background-color: #00C; }
-
-  .collaborer { background-color: #0CF; flex-grow: 2; position: relative; }
-  .collaborer:hover { background-color: #09A; }
-
-  .collaborer::after {
-    content: '';
-    position: absolute;
-    right: -25px;
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid transparent;
-    border-left: 25px solid #0CF;
-    transition: border-left-color 0.3s ease-in-out;
-  }
-  .collaborer:hover::after {
-    border-left-color: #09A;
-  }
-
-  .arrow-tail {
-    width: 20px;
-    height: 50px;
-    background-color: #ccc;
-  }
-</style>
+<title>Projets par Compétence</title>
 </head>
+
 <body>
 
+<div class="competence-header">
+  <h1>MES COMPÉTENCES</h1>
+  <p>Découvrez mes compétences polyvalentes et ma connaissance dans divers domaines, pour des résultats créatifs et précis.</p>
+</div>
+
 <div class="arrow-container">
-  <div class="arrow-tail"></div>
-  <div class="arrow-segment realiser">Réaliser</div>
-  <div class="arrow-segment optimiser">Optimiser</div>
-  <div class="arrow-segment administrer">Administrer</div>
-  <div class="arrow-segment gerer">Gérer</div>
-  <div class="arrow-segment conduire">Conduire</div>
-  <div class="arrow-segment collaborer">Collaborer</div>
+  <button class="arrow-segment" onclick="showSlider('realiser')">Réaliser</button>
+  <button class="arrow-segment" onclick="showSlider('optimiser')">Optimiser</button>
+  <button class="arrow-segment" onclick="showSlider('administrer')">Administrer</button>
+  <button class="arrow-segment" onclick="showSlider('gerer')">Gérer</button>
+  <button class="arrow-segment" onclick="showSlider('conduire')">Conduire</button>
+  <button class="arrow-segment" onclick="showSlider('collaborer')">Collaborer</button>
+</div>
+
+<!-- Conteneur de slider pour la compétence 'Réaliser' -->
+<div class="slider-container" id="realiserSlider">
+  <!-- Projet Réaliser 1 -->
+  <div class="project-card">
+    <h3 class="project-title">Projet Réaliser 1</h3>
+    <img src="chemin/vers/image1.jpg" alt="Image Projet Réaliser 1">
+    <p>Description du projet Réaliser 1.</p>
+    <h4>Axes:</h4>
+    <p>Search Client (CS50)</p>
+    <p>Niveau 2: Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences</p>
+    <p>AC21.01 | Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences</p>
+    <!-- Ajoutez d'autres axes si nécessaire -->
+  </div>
+
+  <!-- Projet Réaliser 2 -->
+  <div class="project-card">
+    <h3 class="project-title">Projet Réaliser 2</h3>
+    <img src="chemin/vers/image2.jpg" alt="Image Projet Réaliser 2">
+    <p>Description du projet Réaliser 2.</p>
+    <h4>Axes:</h4>
+    <!-- Ajoutez les axes pour le deuxième projet réaliser si nécessaire -->
+  </div>
+
+  <!-- Ajoutez d'autres project-card pour d'autres projets sous 'Réaliser' -->
+
+  <!-- Boutons de navigation -->
+  <button class="prev" onclick="navigateSlider('realiser', -1)">❮</button>
+  <button class="next" onclick="navigateSlider('realiser', 1)">❯</button>
 </div>
 
 </body>

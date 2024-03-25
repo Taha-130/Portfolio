@@ -1,0 +1,37 @@
+.slider-container {
+    position: relative;
+    width: 100%; /* Ajustez selon vos besoins */
+    max-width: 800px; /* Limite la largeur du slider */
+    margin: auto; /* Centre le slider horizontalement */
+    overflow: hidden; /* Cache les débordements d'images */
+  }
+  
+  .slide {
+    display: none; /* Cache initialement toutes les diapositives */
+  }
+  
+  .slide img {
+    width: 100%; /* Remplit la largeur du conteneur */
+    height: auto; /* Ajuste la hauteur de manière proportionnelle */
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: #000;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  

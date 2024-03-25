@@ -28,7 +28,7 @@
   .gerer:hover { background-color: #27C; }
 
   .conduire { background-color: rgb(165, 165, 230); }
-  .conduire:hover { background-color: rgb(197, 197, 239); }
+  .conduire:hover { background-color: rgb(131, 131, 176); }
 
   .collaborer { background-color: #0CF; flex-grow: 2; position: relative; }
   .collaborer:hover { background-color: #09A; }
