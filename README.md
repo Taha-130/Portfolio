@@ -59,7 +59,7 @@ Here are some of the projects I’ve worked on:
 
 Feel free to reach out or check out my work through the links below:
 
-- **Email**: [your.tahathierry130@gmail.com](mailto:tahathierry130@gmail.com)
+- **Email**: [tahathierry130@gmail.com](mailto:tahathierry130@gmail.com)
 - **GitHub**: [github.com/Taha-130](https://github.com/Taha-130)
 - **LinkedIn**: [linkedin.com/in/taha-sefoudine](https://linkedin.com/in/taha-sefoudine)
 - **YouTube**: [youtube.com/@Dev_Person](https://youtube.com/@Dev_Person)

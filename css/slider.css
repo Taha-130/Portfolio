@@ -30,3 +30,8 @@
   .project-title {
     margin-bottom: 15px;
   }
+
+  .project-img {
+    width: auto;
+    height: auto;
+  }
